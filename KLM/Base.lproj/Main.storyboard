@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search City View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="SearchCityViewController" customModule="KLM" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search for a city" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="SMw-0M-6Ze">
+                                <rect key="frame" x="25" y="428" width="364" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="I7K-wc-TaT"/>
+                                </constraints>
+                                <color key="textColor" red="0.0" green="0.63052678110000004" blue="0.89669638870000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="27"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="search" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="qKJ-zE-1Pj"/>
+                                </connections>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PEv-Ei-evh">
+                                <rect key="frame" x="25" y="504" width="364" height="358"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="sectionIndexBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="0C0-Mt-8Ml"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="5db-Jy-ogv"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="SMw-0M-6Ze" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="384" id="3Do-fS-Tvi"/>
+                            <constraint firstItem="PEv-Ei-evh" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="75w-A0-fnf"/>
+                            <constraint firstItem="PEv-Ei-evh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="8s9-m8-4cI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PEv-Ei-evh" secondAttribute="trailing" constant="25" id="WmS-pP-K2o"/>
+                            <constraint firstItem="PEv-Ei-evh" firstAttribute="top" secondItem="SMw-0M-6Ze" secondAttribute="bottom" constant="36" id="YCM-7f-UYK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SMw-0M-6Ze" secondAttribute="trailing" constant="25" id="hf5-88-CQy"/>
+                            <constraint firstItem="SMw-0M-6Ze" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="iFu-xN-AQk"/>
+                            <constraint firstItem="SMw-0M-6Ze" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xde-OK-Hfb"/>
+                            <constraint firstItem="SMw-0M-6Ze" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="yj0-R7-kJ8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="3Do-fS-Tvi"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="constraint_textField_centerY" destination="yj0-R7-kJ8" id="Ksq-Z9-8ls"/>
+                        <outlet property="constraint_textField_top" destination="3Do-fS-Tvi" id="bpc-YP-PBI"/>
+                        <outlet property="tableViewSearchResult" destination="PEv-Ei-evh" id="6QM-qF-i8X"/>
+                        <outlet property="textFieldSearch" destination="SMw-0M-6Ze" id="GK7-cr-0xb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="133.92857142857142"/>
+        </scene>
+    </scenes>
+</document>

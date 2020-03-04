@@ -1,0 +1,706 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4CBDF7F1240F588000953405 /* VDSCircleAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBDF7F0240F588000953405 /* VDSCircleAnimation.swift */; };
+		4CC20224240F405F001C7C56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC20223240F405F001C7C56 /* AppDelegate.swift */; };
+		4CC20226240F405F001C7C56 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC20225240F405F001C7C56 /* SceneDelegate.swift */; };
+		4CC2022B240F405F001C7C56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CC20229240F405F001C7C56 /* Main.storyboard */; };
+		4CC2022E240F405F001C7C56 /* KLM.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4CC2022C240F405F001C7C56 /* KLM.xcdatamodeld */; };
+		4CC20230240F4061001C7C56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CC2022F240F4061001C7C56 /* Assets.xcassets */; };
+		4CC20233240F4061001C7C56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CC20231240F4061001C7C56 /* LaunchScreen.storyboard */; };
+		4CC2023E240F4061001C7C56 /* KLMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC2023D240F4061001C7C56 /* KLMTests.swift */; };
+		4CC20249240F4061001C7C56 /* KLMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC20248240F4061001C7C56 /* KLMUITests.swift */; };
+		4CC20257240F4077001C7C56 /* NetworkInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC20256240F4077001C7C56 /* NetworkInterface.swift */; };
+		4CC20262240F4313001C7C56 /* SearchCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC20261240F4313001C7C56 /* SearchCityViewController.swift */; };
+		4CC20264240F4323001C7C56 /* SearchCityPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC20263240F4323001C7C56 /* SearchCityPresenter.swift */; };
+		4CC20266240F4333001C7C56 /* SearchCityProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC20265240F4333001C7C56 /* SearchCityProtocol.swift */; };
+		4CC20268240F4365001C7C56 /* FlightDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC20267240F4365001C7C56 /* FlightDetails.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4CC2023A240F4061001C7C56 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4CC20218240F405F001C7C56 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4CC2021F240F405F001C7C56;
+			remoteInfo = KLM;
+		};
+		4CC20245240F4061001C7C56 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4CC20218240F405F001C7C56 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4CC2021F240F405F001C7C56;
+			remoteInfo = KLM;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4CBDF7F0240F588000953405 /* VDSCircleAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VDSCircleAnimation.swift; sourceTree = "<group>"; };
+		4CC20220240F405F001C7C56 /* KLM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KLM.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CC20223240F405F001C7C56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4CC20225240F405F001C7C56 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4CC2022A240F405F001C7C56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4CC2022D240F405F001C7C56 /* KLM.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KLM.xcdatamodel; sourceTree = "<group>"; };
+		4CC2022F240F4061001C7C56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4CC20232240F4061001C7C56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4CC20234240F4061001C7C56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CC20239240F4061001C7C56 /* KLMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KLMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CC2023D240F4061001C7C56 /* KLMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KLMTests.swift; sourceTree = "<group>"; };
+		4CC2023F240F4061001C7C56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CC20244240F4061001C7C56 /* KLMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KLMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CC20248240F4061001C7C56 /* KLMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KLMUITests.swift; sourceTree = "<group>"; };
+		4CC2024A240F4061001C7C56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CC20256240F4077001C7C56 /* NetworkInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkInterface.swift; sourceTree = "<group>"; };
+		4CC20261240F4313001C7C56 /* SearchCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCityViewController.swift; sourceTree = "<group>"; };
+		4CC20263240F4323001C7C56 /* SearchCityPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCityPresenter.swift; sourceTree = "<group>"; };
+		4CC20265240F4333001C7C56 /* SearchCityProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCityProtocol.swift; sourceTree = "<group>"; };
+		4CC20267240F4365001C7C56 /* FlightDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDetails.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4CC2021D240F405F001C7C56 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CC20236240F4061001C7C56 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CC20241240F4061001C7C56 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4CC20217240F405F001C7C56 = {
+			isa = PBXGroup;
+			children = (
+				4CC20222240F405F001C7C56 /* KLM */,
+				4CC2023C240F4061001C7C56 /* KLMTests */,
+				4CC20247240F4061001C7C56 /* KLMUITests */,
+				4CC20221240F405F001C7C56 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4CC20221240F405F001C7C56 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4CC20220240F405F001C7C56 /* KLM.app */,
+				4CC20239240F4061001C7C56 /* KLMTests.xctest */,
+				4CC20244240F4061001C7C56 /* KLMUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4CC20222240F405F001C7C56 /* KLM */ = {
+			isa = PBXGroup;
+			children = (
+				4CC20269240F4A96001C7C56 /* NetworkInterface */,
+				4CC20259240F428D001C7C56 /* SearchCity */,
+				4CC2025A240F4295001C7C56 /* CityResults */,
+				4CC20258240F4285001C7C56 /* OtherClasses */,
+				4CC20229240F405F001C7C56 /* Main.storyboard */,
+				4CC2022F240F4061001C7C56 /* Assets.xcassets */,
+				4CC20231240F4061001C7C56 /* LaunchScreen.storyboard */,
+				4CC20234240F4061001C7C56 /* Info.plist */,
+				4CC2022C240F405F001C7C56 /* KLM.xcdatamodeld */,
+			);
+			path = KLM;
+			sourceTree = "<group>";
+		};
+		4CC2023C240F4061001C7C56 /* KLMTests */ = {
+			isa = PBXGroup;
+			children = (
+				4CC2023D240F4061001C7C56 /* KLMTests.swift */,
+				4CC2023F240F4061001C7C56 /* Info.plist */,
+			);
+			path = KLMTests;
+			sourceTree = "<group>";
+		};
+		4CC20247240F4061001C7C56 /* KLMUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4CC20248240F4061001C7C56 /* KLMUITests.swift */,
+				4CC2024A240F4061001C7C56 /* Info.plist */,
+			);
+			path = KLMUITests;
+			sourceTree = "<group>";
+		};
+		4CC20258240F4285001C7C56 /* OtherClasses */ = {
+			isa = PBXGroup;
+			children = (
+				4CBDF7F0240F588000953405 /* VDSCircleAnimation.swift */,
+				4CC20223240F405F001C7C56 /* AppDelegate.swift */,
+				4CC20225240F405F001C7C56 /* SceneDelegate.swift */,
+			);
+			name = OtherClasses;
+			sourceTree = "<group>";
+		};
+		4CC20259240F428D001C7C56 /* SearchCity */ = {
+			isa = PBXGroup;
+			children = (
+				4CC2025E240F42DD001C7C56 /* Model */,
+				4CC2025F240F42E2001C7C56 /* Views */,
+				4CC20260240F42E8001C7C56 /* Presenter */,
+			);
+			name = SearchCity;
+			sourceTree = "<group>";
+		};
+		4CC2025A240F4295001C7C56 /* CityResults */ = {
+			isa = PBXGroup;
+			children = (
+				4CC2025B240F42C7001C7C56 /* Model */,
+				4CC2025C240F42CE001C7C56 /* Views */,
+				4CC2025D240F42D6001C7C56 /* Presenter */,
+			);
+			name = CityResults;
+			sourceTree = "<group>";
+		};
+		4CC2025B240F42C7001C7C56 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		4CC2025C240F42CE001C7C56 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		4CC2025D240F42D6001C7C56 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		4CC2025E240F42DD001C7C56 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4CC20267240F4365001C7C56 /* FlightDetails.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		4CC2025F240F42E2001C7C56 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4CC20261240F4313001C7C56 /* SearchCityViewController.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		4CC20260240F42E8001C7C56 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				4CC20263240F4323001C7C56 /* SearchCityPresenter.swift */,
+				4CC20265240F4333001C7C56 /* SearchCityProtocol.swift */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		4CC20269240F4A96001C7C56 /* NetworkInterface */ = {
+			isa = PBXGroup;
+			children = (
+				4CC20256240F4077001C7C56 /* NetworkInterface.swift */,
+			);
+			name = NetworkInterface;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4CC2021F240F405F001C7C56 /* KLM */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4CC2024D240F4061001C7C56 /* Build configuration list for PBXNativeTarget "KLM" */;
+			buildPhases = (
+				4CC2021C240F405F001C7C56 /* Sources */,
+				4CC2021D240F405F001C7C56 /* Frameworks */,
+				4CC2021E240F405F001C7C56 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KLM;
+			productName = KLM;
+			productReference = 4CC20220240F405F001C7C56 /* KLM.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4CC20238240F4061001C7C56 /* KLMTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4CC20250240F4061001C7C56 /* Build configuration list for PBXNativeTarget "KLMTests" */;
+			buildPhases = (
+				4CC20235240F4061001C7C56 /* Sources */,
+				4CC20236240F4061001C7C56 /* Frameworks */,
+				4CC20237240F4061001C7C56 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4CC2023B240F4061001C7C56 /* PBXTargetDependency */,
+			);
+			name = KLMTests;
+			productName = KLMTests;
+			productReference = 4CC20239240F4061001C7C56 /* KLMTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4CC20243240F4061001C7C56 /* KLMUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4CC20253240F4061001C7C56 /* Build configuration list for PBXNativeTarget "KLMUITests" */;
+			buildPhases = (
+				4CC20240240F4061001C7C56 /* Sources */,
+				4CC20241240F4061001C7C56 /* Frameworks */,
+				4CC20242240F4061001C7C56 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4CC20246240F4061001C7C56 /* PBXTargetDependency */,
+			);
+			name = KLMUITests;
+			productName = KLMUITests;
+			productReference = 4CC20244240F4061001C7C56 /* KLMUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4CC20218240F405F001C7C56 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1120;
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = Goutham;
+				TargetAttributes = {
+					4CC2021F240F405F001C7C56 = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+					4CC20238240F4061001C7C56 = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = 4CC2021F240F405F001C7C56;
+					};
+					4CC20243240F4061001C7C56 = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = 4CC2021F240F405F001C7C56;
+					};
+				};
+			};
+			buildConfigurationList = 4CC2021B240F405F001C7C56 /* Build configuration list for PBXProject "KLM" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4CC20217240F405F001C7C56;
+			productRefGroup = 4CC20221240F405F001C7C56 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4CC2021F240F405F001C7C56 /* KLM */,
+				4CC20238240F4061001C7C56 /* KLMTests */,
+				4CC20243240F4061001C7C56 /* KLMUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4CC2021E240F405F001C7C56 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CC20233240F4061001C7C56 /* LaunchScreen.storyboard in Resources */,
+				4CC20230240F4061001C7C56 /* Assets.xcassets in Resources */,
+				4CC2022B240F405F001C7C56 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CC20237240F4061001C7C56 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CC20242240F4061001C7C56 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4CC2021C240F405F001C7C56 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CC2022E240F405F001C7C56 /* KLM.xcdatamodeld in Sources */,
+				4CC20266240F4333001C7C56 /* SearchCityProtocol.swift in Sources */,
+				4CC20268240F4365001C7C56 /* FlightDetails.swift in Sources */,
+				4CC20262240F4313001C7C56 /* SearchCityViewController.swift in Sources */,
+				4CBDF7F1240F588000953405 /* VDSCircleAnimation.swift in Sources */,
+				4CC20224240F405F001C7C56 /* AppDelegate.swift in Sources */,
+				4CC20264240F4323001C7C56 /* SearchCityPresenter.swift in Sources */,
+				4CC20257240F4077001C7C56 /* NetworkInterface.swift in Sources */,
+				4CC20226240F405F001C7C56 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CC20235240F4061001C7C56 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CC2023E240F4061001C7C56 /* KLMTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CC20240240F4061001C7C56 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CC20249240F4061001C7C56 /* KLMUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4CC2023B240F4061001C7C56 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4CC2021F240F405F001C7C56 /* KLM */;
+			targetProxy = 4CC2023A240F4061001C7C56 /* PBXContainerItemProxy */;
+		};
+		4CC20246240F4061001C7C56 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4CC2021F240F405F001C7C56 /* KLM */;
+			targetProxy = 4CC20245240F4061001C7C56 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4CC20229240F405F001C7C56 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4CC2022A240F405F001C7C56 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4CC20231240F4061001C7C56 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4CC20232240F4061001C7C56 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4CC2024B240F4061001C7C56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4CC2024C240F4061001C7C56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4CC2024E240F4061001C7C56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = KLM/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.goutham.KLM;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4CC2024F240F4061001C7C56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = KLM/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.goutham.KLM;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4CC20251240F4061001C7C56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = KLMTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.goutham.KLMTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KLM.app/KLM";
+			};
+			name = Debug;
+		};
+		4CC20252240F4061001C7C56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = KLMTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.goutham.KLMTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KLM.app/KLM";
+			};
+			name = Release;
+		};
+		4CC20254240F4061001C7C56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = KLMUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.goutham.KLMUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KLM;
+			};
+			name = Debug;
+		};
+		4CC20255240F4061001C7C56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = KLMUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.goutham.KLMUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KLM;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4CC2021B240F405F001C7C56 /* Build configuration list for PBXProject "KLM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CC2024B240F4061001C7C56 /* Debug */,
+				4CC2024C240F4061001C7C56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4CC2024D240F4061001C7C56 /* Build configuration list for PBXNativeTarget "KLM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CC2024E240F4061001C7C56 /* Debug */,
+				4CC2024F240F4061001C7C56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4CC20250240F4061001C7C56 /* Build configuration list for PBXNativeTarget "KLMTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CC20251240F4061001C7C56 /* Debug */,
+				4CC20252240F4061001C7C56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4CC20253240F4061001C7C56 /* Build configuration list for PBXNativeTarget "KLMUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CC20254240F4061001C7C56 /* Debug */,
+				4CC20255240F4061001C7C56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4CC2022C240F405F001C7C56 /* KLM.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4CC2022D240F405F001C7C56 /* KLM.xcdatamodel */,
+			);
+			currentVersion = 4CC2022D240F405F001C7C56 /* KLM.xcdatamodel */;
+			path = KLM.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 4CC20218240F405F001C7C56 /* Project object */;
+}
