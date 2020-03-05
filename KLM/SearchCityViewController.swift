@@ -87,13 +87,29 @@ extension SearchCityViewController: UITextFieldDelegate{
         
         initialTextFieldAnimation()
     }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        if let text = textField.text as NSString? {
+            
+            let txtAfterUpdate = text.replacingCharacters(in: range, with: string)
+            searchCityPresenter?.filterArrayData(city_charaters: txtAfterUpdate)
+            tableViewSearchResult.reloadData()
+        }
+        return true
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }
 
 extension SearchCityViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        if let data_airport = searchCityPresenter?.airport_data{
+        if let data_airport = searchCityPresenter?.airport_data_filtered_results{
             return data_airport.count
         }
         
@@ -104,7 +120,9 @@ extension SearchCityViewController: UITableViewDelegate, UITableViewDataSource{
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "SearchCell", for: indexPath)
 
-        if let data_airport = searchCityPresenter?.airport_data{
+        cell.selectionStyle = .none
+        
+        if let data_airport = searchCityPresenter?.airport_data_filtered_results{
             
             let data_im = data_airport[indexPath.row]
 
@@ -121,7 +139,7 @@ extension SearchCityViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        if let data_airport = searchCityPresenter?.airport_data{
+        if let data_airport = searchCityPresenter?.airport_data_filtered_results{
             
             let data_im = data_airport[indexPath.row]
 
@@ -129,5 +147,8 @@ extension SearchCityViewController: UITableViewDelegate, UITableViewDataSource{
                 print("Selected city: \(city)")
             }
         }
+        
+        performSegue(withIdentifier: "searchToResults", sender: nil)
+        
     }
 }

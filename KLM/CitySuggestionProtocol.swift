@@ -1,14 +1,15 @@
 //
-//  SearchCityProtocol.swift
+//  CitySuggestionProtocol.swift
 //  KLM
 //
-//  Created by Goutham Devaraju on 04/03/20.
+//  Created by Goutham Devaraju on 05/03/20.
 //  Copyright © 2020 Goutham. All rights reserved.
 //
 
 import Foundation
 
-protocol SearchCityPresenterProtocol: class {
+
+protocol CitySuggestionPresenterProtocol: class {
     
     //For fetching EOS profile data
     func fetchFlightDetails()
@@ -17,7 +18,7 @@ protocol SearchCityPresenterProtocol: class {
     func handleErrorFromFlightDetails()
 }
 
-protocol SearchCityViewProtocol: class {
+protocol CitySuggestionViewProtocol: class {
     
     //For fetching EOS profile data
     func fetchFlightDetailsAPI()
@@ -26,4 +27,5 @@ protocol SearchCityViewProtocol: class {
     func showLoaderAnimation()
     
     func initialTextFieldAnimation()
+
 }

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C34249A241055300099C601 /* CitySuggestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C342499241055300099C601 /* CitySuggestionViewController.swift */; };
+		4C34249C241055560099C601 /* CitySuggestionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C34249B241055560099C601 /* CitySuggestionPresenter.swift */; };
+		4C34249E241055670099C601 /* CitySuggestionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C34249D241055670099C601 /* CitySuggestionProtocol.swift */; };
+		4C3424A0241060F50099C601 /* CitySuggestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C34249F241060F50099C601 /* CitySuggestionCell.swift */; };
 		4CBDF7F1240F588000953405 /* VDSCircleAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBDF7F0240F588000953405 /* VDSCircleAnimation.swift */; };
 		4CC20224240F405F001C7C56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC20223240F405F001C7C56 /* AppDelegate.swift */; };
 		4CC20226240F405F001C7C56 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC20225240F405F001C7C56 /* SceneDelegate.swift */; };
@@ -41,6 +45,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C342499241055300099C601 /* CitySuggestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySuggestionViewController.swift; sourceTree = "<group>"; };
+		4C34249B241055560099C601 /* CitySuggestionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySuggestionPresenter.swift; sourceTree = "<group>"; };
+		4C34249D241055670099C601 /* CitySuggestionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySuggestionProtocol.swift; sourceTree = "<group>"; };
+		4C34249F241060F50099C601 /* CitySuggestionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySuggestionCell.swift; sourceTree = "<group>"; };
 		4CBDF7F0240F588000953405 /* VDSCircleAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VDSCircleAnimation.swift; sourceTree = "<group>"; };
 		4CC20220240F405F001C7C56 /* KLM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KLM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CC20223240F405F001C7C56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -113,7 +121,7 @@
 			children = (
 				4CC20269240F4A96001C7C56 /* NetworkInterface */,
 				4CC20259240F428D001C7C56 /* SearchCity */,
-				4CC2025A240F4295001C7C56 /* CityResults */,
+				4CC2025A240F4295001C7C56 /* CitySuggestions */,
 				4CC20258240F4285001C7C56 /* OtherClasses */,
 				4CC20229240F405F001C7C56 /* Main.storyboard */,
 				4CC2022F240F4061001C7C56 /* Assets.xcassets */,
@@ -162,14 +170,14 @@
 			name = SearchCity;
 			sourceTree = "<group>";
 		};
-		4CC2025A240F4295001C7C56 /* CityResults */ = {
+		4CC2025A240F4295001C7C56 /* CitySuggestions */ = {
 			isa = PBXGroup;
 			children = (
 				4CC2025B240F42C7001C7C56 /* Model */,
 				4CC2025C240F42CE001C7C56 /* Views */,
 				4CC2025D240F42D6001C7C56 /* Presenter */,
 			);
-			name = CityResults;
+			name = CitySuggestions;
 			sourceTree = "<group>";
 		};
 		4CC2025B240F42C7001C7C56 /* Model */ = {
@@ -182,6 +190,8 @@
 		4CC2025C240F42CE001C7C56 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4C342499241055300099C601 /* CitySuggestionViewController.swift */,
+				4C34249F241060F50099C601 /* CitySuggestionCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -189,6 +199,8 @@
 		4CC2025D240F42D6001C7C56 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				4C34249B241055560099C601 /* CitySuggestionPresenter.swift */,
+				4C34249D241055670099C601 /* CitySuggestionProtocol.swift */,
 			);
 			name = Presenter;
 			sourceTree = "<group>";
@@ -358,9 +370,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CC2022E240F405F001C7C56 /* KLM.xcdatamodeld in Sources */,
+				4C3424A0241060F50099C601 /* CitySuggestionCell.swift in Sources */,
+				4C34249A241055300099C601 /* CitySuggestionViewController.swift in Sources */,
 				4CC20266240F4333001C7C56 /* SearchCityProtocol.swift in Sources */,
+				4C34249C241055560099C601 /* CitySuggestionPresenter.swift in Sources */,
 				4CC20268240F4365001C7C56 /* FlightDetails.swift in Sources */,
 				4CC20262240F4313001C7C56 /* SearchCityViewController.swift in Sources */,
+				4C34249E241055670099C601 /* CitySuggestionProtocol.swift in Sources */,
 				4CBDF7F1240F588000953405 /* VDSCircleAnimation.swift in Sources */,
 				4CC20224240F405F001C7C56 /* AppDelegate.swift in Sources */,
 				4CC20264240F4323001C7C56 /* SearchCityPresenter.swift in Sources */,

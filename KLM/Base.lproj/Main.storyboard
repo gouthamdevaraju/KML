@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Fzf-pj-gf5">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Search City View Controller-->
+        <!--Select City-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="SearchCityViewController" customModule="KLM" customModuleProvider="target" sceneMemberID="viewController">
@@ -21,13 +21,13 @@
                                     <constraint firstAttribute="height" constant="40" id="I7K-wc-TaT"/>
                                 </constraints>
                                 <color key="textColor" red="0.0" green="0.63052678110000004" blue="0.89669638870000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="27"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="30"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="search" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="qKJ-zE-1Pj"/>
                                 </connections>
                             </textField>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PEv-Ei-evh">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PEv-Ei-evh">
                                 <rect key="frame" x="25" y="504" width="364" height="358"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <color key="sectionIndexBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -56,14 +56,147 @@
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" title="Select City" id="wsk-hr-BKf"/>
                     <connections>
                         <outlet property="constraint_textField_centerY" destination="yj0-R7-kJ8" id="Ksq-Z9-8ls"/>
                         <outlet property="constraint_textField_top" destination="3Do-fS-Tvi" id="bpc-YP-PBI"/>
                         <outlet property="tableViewSearchResult" destination="PEv-Ei-evh" id="6QM-qF-i8X"/>
                         <outlet property="textFieldSearch" destination="SMw-0M-6Ze" id="GK7-cr-0xb"/>
+                        <segue destination="RHO-k7-IaU" kind="show" identifier="searchToResults" id="0wS-s3-U1f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="133.92857142857142"/>
+        </scene>
+        <!--City Suggestion View Controller-->
+        <scene sceneID="Oc4-vK-Bs0">
+            <objects>
+                <viewController id="RHO-k7-IaU" customClass="CitySuggestionViewController" customModule="KLM" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EEp-RY-6qN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2Dn-zG-FYt">
+                                <rect key="frame" x="0.0" y="88" width="414" height="783"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CitySuggestionCellID" rowHeight="150" id="fdU-0M-V0Z" customClass="CitySuggestionCell" customModule="KLM" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fdU-0M-V0Z" id="U4t-6a-OrU">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZEc-Ch-zkn" customClass="ShadowView" customModule="KLM" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="11" width="374" height="128"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="GT4-Ng-DLP">
+                                                            <rect key="frame" x="20" y="10" width="334" height="108"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Asia Pasic Airport" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="18" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mgG-G0-rLA">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
+                                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="25"/>
+                                                                    <color key="textColor" red="0.0" green="0.63052678110000004" blue="0.89669638870000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country: India" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="18" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MEJ-Xs-mdG">
+                                                                    <rect key="frame" x="0.0" y="55" width="334" height="24"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="24" id="M7K-PJ-v4F"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
+                                                                    <color key="textColor" red="0.8901960784313725" green="0.44705882352941173" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Runway Length: 324345635" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="18" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eRa-FT-Laq">
+                                                                    <rect key="frame" x="0.0" y="84" width="334" height="24"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="24" id="dOV-eg-iZ3"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
+                                                                    <color key="textColor" red="0.96549338100000004" green="0.49775499109999999" blue="0.28166779879999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="GT4-Ng-DLP" firstAttribute="leading" secondItem="ZEc-Ch-zkn" secondAttribute="leading" constant="20" id="2Sb-e6-ECL"/>
+                                                        <constraint firstItem="GT4-Ng-DLP" firstAttribute="top" secondItem="ZEc-Ch-zkn" secondAttribute="top" constant="10" id="EQv-n7-UXp"/>
+                                                        <constraint firstAttribute="bottom" secondItem="GT4-Ng-DLP" secondAttribute="bottom" constant="10" id="Suy-qa-IXx"/>
+                                                        <constraint firstAttribute="trailing" secondItem="GT4-Ng-DLP" secondAttribute="trailing" constant="20" id="VXX-we-4pG"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                            <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                            <real key="value" value="0.40000000000000002"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                            <size key="value" width="0.0" height="0.0"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                            <real key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="7"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ZEc-Ch-zkn" firstAttribute="top" secondItem="U4t-6a-OrU" secondAttribute="topMargin" id="AH5-fR-AZ1"/>
+                                                <constraint firstItem="ZEc-Ch-zkn" firstAttribute="leading" secondItem="U4t-6a-OrU" secondAttribute="leadingMargin" id="Iya-gb-KQh"/>
+                                                <constraint firstItem="ZEc-Ch-zkn" firstAttribute="trailing" secondItem="U4t-6a-OrU" secondAttribute="trailingMargin" id="URK-Zf-th7"/>
+                                                <constraint firstItem="ZEc-Ch-zkn" firstAttribute="bottom" secondItem="U4t-6a-OrU" secondAttribute="bottomMargin" id="XVj-Rp-FBA"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="labelAirport" destination="mgG-G0-rLA" id="SpP-mD-PRW"/>
+                                            <outlet property="labelCountry" destination="MEJ-Xs-mdG" id="LHZ-Ha-nlp"/>
+                                            <outlet property="labelRunwayLength" destination="eRa-FT-Laq" id="gn0-0K-R3O"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="RHO-k7-IaU" id="TUh-Ul-WTO"/>
+                                    <outlet property="delegate" destination="RHO-k7-IaU" id="KBx-pC-GS5"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="2Dn-zG-FYt" firstAttribute="trailing" secondItem="FG8-Ns-hUQ" secondAttribute="trailing" id="7eP-KX-OF3"/>
+                            <constraint firstItem="2Dn-zG-FYt" firstAttribute="top" secondItem="FG8-Ns-hUQ" secondAttribute="top" id="E2B-Tv-TwN"/>
+                            <constraint firstAttribute="bottom" secondItem="2Dn-zG-FYt" secondAttribute="bottom" constant="25" id="VNI-U5-9YB"/>
+                            <constraint firstItem="2Dn-zG-FYt" firstAttribute="leading" secondItem="FG8-Ns-hUQ" secondAttribute="leading" id="w0c-38-j3y"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FG8-Ns-hUQ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="SjB-P5-UF4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T6F-JX-75c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1921.7391304347827" y="133.92857142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="p1M-ZH-P5Y">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Fzf-pj-gf5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="h8U-r7-beJ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="vYG-Ha-2EQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IxJ-Mz-kkQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="133.92857142857142"/>
         </scene>

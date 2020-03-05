@@ -15,6 +15,7 @@ class SearchCityPresenter: SearchCityPresenterProtocol{
     var search_city_viewController : SearchCityViewController? = nil
     
     var airport_data: [FlightDetails]?
+    var airport_data_filtered_results: [FlightDetails]?
     
     //MARK: - Methods
     required init(view: SearchCityViewController) {
@@ -55,16 +56,7 @@ class SearchCityPresenter: SearchCityPresenterProtocol{
         
         //Paass data to the views
         airport_data = flight_data
-        
-//        airport_data = flight_data.sorted()
-        
-        //Sorting array alphabatically
-//        airport_data = flight_data.sorted(by: { (Obj1, Obj2) -> Bool in
-//           let Obj1_Name = Obj1.city
-//           let Obj2_Name = Obj2.city
-//            return (Obj1_Name!.localizedCaseInsensitiveCompare(Obj2_Name!) == .orderedAscending)
-//        })
-        
+
         DispatchQueue.main.async {
             self.search_city_viewController?.handleAirportDataResponse()
         }
@@ -75,6 +67,31 @@ class SearchCityPresenter: SearchCityPresenterProtocol{
         //Stop loader
         DispatchQueue.main.async {
             self.search_city_viewController?.loader_view.removeFromSuperview()
+        }
+    }
+    
+    func filterArrayData(city_charaters: String){
+        
+        if let data_airport = airport_data{
+            
+            let arr = data_airport.filter{
+                if let city_name = $0.city{
+                    return city_name.lowercased().contains(city_charaters.lowercased())
+                }
+                else{
+                    return false
+                }
+            }
+            
+            if arr.count > 0
+            {
+                airport_data_filtered_results = []
+                airport_data_filtered_results = arr
+            }
+            else
+            {
+                airport_data_filtered_results = []
+            }
         }
     }
 }
